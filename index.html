@@ -1,170 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Beauty | Premium Nail Studio</title>
+    <title>Create Beauty Nail | Redefine Your Aesthetic</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif']
-                    },
-                    colors: {
-                        zinc: {
-                            950: '#09090b',
-                        }
-                    }
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #09090b; color: white; }
+        body { background-color: #050505; color: #fafafa; overflow-x: hidden; }
+        .double-bezel { padding: 4px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 2rem; }
+        .double-bezel-inner { background: rgba(20,20,20,0.8); backdrop-filter: blur(16px); border-radius: 1.75rem; padding: 2.5rem; height: 100%; border: 1px solid rgba(255,255,255,0.03); }
+        .glass-nav { background: rgba(5,5,5,0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
-<body class="bg-zinc-950 text-white selection:bg-white selection:text-zinc-950 antialiased overflow-x-hidden">
+<body class="antialiased selection:bg-white selection:text-black">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 mix-blend-difference p-6 flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tight">CREATE BEAUTY.</div>
-        <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-            <a href="#services" class="hover:text-zinc-400 transition-colors">Services</a>
-            <a href="#about" class="hover:text-zinc-400 transition-colors">Atelier</a>
-            <a href="#book" class="hover:text-zinc-400 transition-colors">Booking</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold tracking-widest uppercase">Create Beauty</div>
+            <button class="bg-white text-black px-6 py-2 rounded-full text-sm font-medium hover:scale-95 transition-transform">Book Now</button>
         </div>
-        <button class="bg-white text-zinc-950 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-zinc-200 transition-colors">
-            Book Now
-        </button>
     </nav>
 
     <!-- Hero -->
-    <section class="min-h-[100dvh] flex flex-col md:flex-row items-center px-6 md:px-12 pt-24 md:pt-0 gap-12 md:gap-0">
-        <div class="flex-1 flex flex-col justify-center max-w-3xl z-10">
-            <h1 class="text-6xl md:text-8xl lg:text-[8rem] font-bold tracking-tighter leading-[0.9] mb-8">
-                REDEFINE<br>
-                <span class="text-zinc-500">YOUR</span><br>
-                AESTHETIC.
-            </h1>
-            <p class="text-lg md:text-xl text-zinc-400 max-w-md font-light leading-relaxed mb-12">
-                A minimalist sanctuary for high-end nail artistry. Precision, elegance, and understated luxury in every detail.
-            </p>
-            <div class="flex items-center gap-6">
-                <a href="#book" class="bg-white text-zinc-950 px-8 py-4 rounded-full font-bold hover:bg-zinc-200 transition-transform hover:scale-105 active:scale-95 flex items-center gap-2">
-                    Reserve a Seat <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-            </div>
+    <section class="min-h-[100dvh] flex items-center pt-20 px-6 relative">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover" alt="Nail Art" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]"></div>
         </div>
-        <div class="flex-1 w-full flex justify-end">
-            <div class="relative w-full max-w-lg aspect-[4/5] overflow-hidden rounded-[2rem] bg-zinc-900 md:-translate-y-12">
-                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Minimalist Nail Art" class="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700" />
-                <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]"></div>
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 relative z-10">
+            <div class="flex flex-col justify-center">
+                <span class="inline-block py-1 px-3 rounded-full border border-white/10 text-xs tracking-[0.2em] uppercase w-max mb-6 text-zinc-400">Premium Nail Studio</span>
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8">REDEFINE<br>YOUR<br>AESTHETIC.</h1>
+                <p class="text-zinc-400 text-lg max-w-[45ch] mb-10 leading-relaxed">Experience high-end nail artistry. Precision, luxury, and unmatched attention to detail in the heart of New York.</p>
+                <div class="flex items-center gap-4">
+                    <button class="bg-white text-black px-8 py-4 rounded-full font-medium hover:scale-95 transition-transform flex items-center gap-2">
+                        Reserve Your Session <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Bento Grid -->
-    <section id="services" class="py-32 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="mb-24 md:flex justify-between items-end">
-            <h2 class="text-5xl md:text-6xl font-bold tracking-tighter">THE<br>SERVICES.</h2>
-            <p class="text-zinc-400 max-w-sm mt-6 md:mt-0 font-light text-lg">Curated treatments designed for the modern aesthetician.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- Card 1 -->
-            <div class="p-1 bg-white/5 ring-1 ring-white/10 rounded-[2rem] group lg:col-span-2">
-                <div class="bg-zinc-900/50 backdrop-blur-md rounded-[1.5rem] p-8 h-full flex flex-col justify-between relative overflow-hidden">
-                    <div class="relative z-10">
+    <!-- Services (Double Bezel) -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter mb-16">CURATED<br>SERVICES.</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="double-bezel">
+                    <div class="double-bezel-inner flex flex-col">
                         <i data-lucide="sparkles" class="w-8 h-8 text-white mb-6"></i>
-                        <h3 class="text-3xl font-bold tracking-tight mb-4">Signature Manicure</h3>
-                        <p class="text-zinc-400 text-lg font-light max-w-md">Comprehensive nail care featuring structural gel overlays and precision cuticle work.</p>
-                    </div>
-                    <div class="relative z-10 mt-12 flex justify-between items-end">
-                        <span class="text-2xl font-medium">$85</span>
-                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-all">
-                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Sculpted Extensions</h3>
+                        <p class="text-zinc-400 leading-relaxed flex-grow">Flawless hard gel and acrylic extensions tailored to your natural nail architecture.</p>
+                        <div class="mt-8 text-sm font-medium tracking-widest uppercase border-t border-white/10 pt-4">From $85</div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="p-1 bg-white/5 ring-1 ring-white/10 rounded-[2rem] group">
-                <div class="bg-zinc-900/50 backdrop-blur-md rounded-[1.5rem] p-8 h-full flex flex-col justify-between relative overflow-hidden">
-                    <div class="relative z-10">
-                        <i data-lucide="droplets" class="w-8 h-8 text-white mb-6"></i>
-                        <h3 class="text-2xl font-bold tracking-tight mb-4">Apres Gel-X</h3>
-                        <p class="text-zinc-400 font-light">Flawless extensions with zero damage. Lightweight and durable.</p>
-                    </div>
-                    <div class="relative z-10 mt-12 flex justify-between items-end">
-                        <span class="text-2xl font-medium">$120</span>
-                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-all">
-                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                        </div>
+                <!-- Card 2 -->
+                <div class="double-bezel">
+                    <div class="double-bezel-inner flex flex-col">
+                        <i data-lucide="droplet" class="w-8 h-8 text-white mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-4">Russian Manicure</h3>
+                        <p class="text-zinc-400 leading-relaxed flex-grow">E-file precision cuticle care for a seamless, long-lasting polish application.</p>
+                        <div class="mt-8 text-sm font-medium tracking-widest uppercase border-t border-white/10 pt-4">From $65</div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="p-1 bg-white/5 ring-1 ring-white/10 rounded-[2rem] group">
-                <div class="bg-zinc-900/50 backdrop-blur-md rounded-[1.5rem] p-8 h-full flex flex-col justify-between relative overflow-hidden">
-                    <div class="relative z-10">
+                <!-- Card 3 -->
+                <div class="double-bezel">
+                    <div class="double-bezel-inner flex flex-col">
                         <i data-lucide="palette" class="w-8 h-8 text-white mb-6"></i>
-                        <h3 class="text-2xl font-bold tracking-tight mb-4">Bespoke Art</h3>
-                        <p class="text-zinc-400 font-light">Custom designs, chrome finishes, and minimalist 3D textures.</p>
-                    </div>
-                    <div class="relative z-10 mt-12 flex justify-between items-end">
-                        <span class="text-2xl font-medium">From $30</span>
-                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 transition-all">
-                            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Bespoke Nail Art</h3>
+                        <p class="text-zinc-400 leading-relaxed flex-grow">Hand-painted minimal to complex designs by our resident artists.</p>
+                        <div class="mt-8 text-sm font-medium tracking-widest uppercase border-t border-white/10 pt-4">Custom Pricing</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Image Card -->
-            <div class="p-1 bg-white/5 ring-1 ring-white/10 rounded-[2rem] lg:col-span-2">
-                <div class="relative w-full h-full min-h-[300px] overflow-hidden rounded-[1.5rem] bg-zinc-900">
-                    <img src="https://images.unsplash.com/photo-1595868643152-441d40c74fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Nail Detail" class="absolute inset-0 w-full h-full object-cover opacity-80" />
-                </div>
+    <!-- Gallery -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
+            <div class="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-white/10">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe459e366?q=80&w=1200&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Nail Detail 1" />
             </div>
-
+            <div class="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-white/10">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Nail Detail 2" />
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 md:py-24 px-6 md:px-12 border-t border-white/10 mt-24">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-0">
+    <footer class="py-24 px-6 border-t border-white/5 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
             <div>
-                <h4 class="text-3xl md:text-5xl font-bold tracking-tighter mb-6">CREATE<br>BEAUTY.</h4>
-                <p class="text-zinc-500 max-w-xs font-light">Elevating nail artistry through minimalism and precision.</p>
+                <div class="text-2xl font-bold tracking-widest uppercase mb-6">Create Beauty</div>
+                <p class="text-zinc-500 max-w-xs">New York's premier destination for high-end nail aesthetics.</p>
             </div>
-            <div class="flex gap-12 text-sm text-zinc-400 font-medium">
-                <div class="flex flex-col gap-4">
-                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                    <a href="#" class="hover:text-white transition-colors">TikTok</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <a href="#" class="hover:text-white transition-colors">Contact</a>
-                    <a href="#" class="hover:text-white transition-colors">Policies</a>
-                </div>
+            <div class="text-zinc-400 space-y-2 text-sm">
+                <p>contact@createbeautynail.com</p>
+                <p>+1 (555) 123-4567</p>
+                <p class="pt-4 text-zinc-600">&copy; 2026 Create Beauty Nail. All rights reserved.</p>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-zinc-600 text-sm flex justify-between">
-            <span>&copy; 2026 Create Beauty. All rights reserved.</span>
-            <span>Awwwards Tier Design.</span>
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
