@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  basePath: "/createbeautynail-com-demo-v2",
 };
 
 export default nextConfig;
